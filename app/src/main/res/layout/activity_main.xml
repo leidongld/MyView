@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Draw a circle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <com.example.leidong.myview.views.simpleViews.Circle
+            android:id="@+id/firstView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:onClick="onClickCircle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Draw a rectangle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <com.example.leidong.myview.views.simpleViews.Rectangle
+            android:id="@+id/rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:onClick="onClickRect" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Draw a point"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <com.example.leidong.myview.views.simpleViews.Point
+            android:id="@+id/point"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickPoint" />
+
+        <TextView
+            android:text="Draw points"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Points
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickPoints"/>
+
+        <TextView
+            android:text="Draw oval"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Oval
+            android:id="@+id/oval"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickOval"/>
+
+        <TextView
+            android:text="Draw line"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Line
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickLine"/>
+
+        <TextView
+            android:text="Draw lines"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Lines
+            android:id="@+id/lines"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickLines"/>
+
+        <TextView
+            android:text="Draw round rectangle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.RoundRectangle
+            android:id="@+id/roundRectangle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickRoundRectangle"/>
+
+        <TextView
+            android:text="Draw arc"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Arc
+            android:id="@+id/arc"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickArc"/>
+
+        <TextView
+            android:text="Draw heart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.leidong.myview.views.simpleViews.Heart
+            android:id="@+id/heart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClickHeart"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
