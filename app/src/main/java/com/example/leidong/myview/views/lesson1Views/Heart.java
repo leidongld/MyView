@@ -1,10 +1,12 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Shader;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -38,7 +40,9 @@ public class Heart extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mPaint.setColor(Color.RED);
+        Shader shader = new LinearGradient(100, 100, 500, 500, Color.GREEN, Color.YELLOW, Shader.TileMode.MIRROR);
+        mPaint.setShader(shader);
+
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setAntiAlias(true);
 

@@ -1,9 +1,11 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Shader;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -30,8 +32,11 @@ public class Arc extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        Shader shader = new LinearGradient(100, 100, 500, 500, Color.parseColor("#E91E63"), Color.parseColor("#2196F3"), Shader.TileMode.CLAMP);
+        mPaint.setShader(shader);
+
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setColor(Color.RED);
+//        mPaint.setColor(Color.parseColor("#FF9800"));
         mPaint.setAntiAlias(true);
         mPaint.setStrokeWidth(30);
 

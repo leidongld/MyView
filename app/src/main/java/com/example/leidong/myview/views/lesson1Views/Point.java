@@ -1,4 +1,4 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;

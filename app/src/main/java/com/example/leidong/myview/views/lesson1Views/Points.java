@@ -1,4 +1,4 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,22 +11,27 @@ import android.view.View;
 /**
  * Created by Lei Dong on 2019/3/24.
  */
-public class Line extends View {
+public class Points extends View {
     private Paint mPaint = new Paint();
 
-    public Line(Context context, @Nullable AttributeSet attrs) {
+    public Points(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
+    /**
+     * Draw points
+     *
+     * @param canvas
+     */
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
         mPaint.setColor(Color.RED);
-        mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(20);
-        mPaint.setAntiAlias(true);
+        mPaint.setStrokeWidth(50);
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
 
-        canvas.drawLine(100, 100, 800, 200, mPaint);
+        float[] points = {100, 100, 100, 500, 500, 100, 500, 500};
+        canvas.drawPoints(points, 0, 8, mPaint);
     }
 }

@@ -1,22 +1,28 @@
-package com.example.leidong.myview;
+package com.example.leidong.myview.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.leidong.myview.views.simpleViews.Arc;
-import com.example.leidong.myview.views.simpleViews.Circle;
-import com.example.leidong.myview.views.simpleViews.Heart;
-import com.example.leidong.myview.views.simpleViews.Line;
-import com.example.leidong.myview.views.simpleViews.Lines;
-import com.example.leidong.myview.views.simpleViews.Oval;
-import com.example.leidong.myview.views.simpleViews.Point;
-import com.example.leidong.myview.views.simpleViews.Points;
-import com.example.leidong.myview.views.simpleViews.Rectangle;
-import com.example.leidong.myview.views.simpleViews.RoundRectangle;
+import com.example.leidong.myview.R;
+import com.example.leidong.myview.views.lesson1Views.Arc;
+import com.example.leidong.myview.views.lesson1Views.Circle;
+import com.example.leidong.myview.views.lesson1Views.Heart;
+import com.example.leidong.myview.views.lesson1Views.Line;
+import com.example.leidong.myview.views.lesson1Views.Lines;
+import com.example.leidong.myview.views.lesson1Views.Oval;
+import com.example.leidong.myview.views.lesson1Views.Point;
+import com.example.leidong.myview.views.lesson1Views.Points;
+import com.example.leidong.myview.views.lesson1Views.Rectangle;
+import com.example.leidong.myview.views.lesson1Views.RoundRectangle;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by Lei Dong on 2019/3/31.
+ */
+public class Lesson1Activity extends AppCompatActivity {
+    private static final String TAG = Lesson1Activity.class.getSimpleName();
+
     private Circle mCircle;
     private Rectangle mRectangle;
     private Point mPoint;
@@ -31,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lesson1);
 
         initWidgest();
     }

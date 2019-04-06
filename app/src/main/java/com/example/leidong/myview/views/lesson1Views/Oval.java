@@ -1,9 +1,11 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Shader;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -13,15 +15,15 @@ import android.view.View;
 /**
  * Created by Lei Dong on 2019/3/24.
  */
-public class RoundRectangle extends View {
+public class Oval extends View {
     private Paint mPaint = new Paint();
 
-    public RoundRectangle(Context context, @Nullable AttributeSet attrs) {
+    public Oval(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
     /**
-     * Draw round rectangle
+     * Draw an oval
      *
      * @param canvas
      */
@@ -30,12 +32,14 @@ public class RoundRectangle extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(20);
-        mPaint.setColor(Color.RED);
+        Shader shader = new LinearGradient(100, 100, 200, 200, Color.BLUE, Color.GRAY, Shader.TileMode.REPEAT);
+        mPaint.setShader(shader);
+
+        mPaint.setStrokeWidth(50);
+        mPaint.setStyle(Paint.Style.FILL);
         mPaint.setAntiAlias(true);
 
-        canvas.drawRoundRect(100, 100, 500, 300, 50, 50, mPaint);
+        canvas.drawOval(100, 100, 1000 ,600, mPaint);
     }
-
 }
+

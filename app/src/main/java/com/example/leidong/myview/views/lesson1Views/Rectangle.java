@@ -1,9 +1,11 @@
-package com.example.leidong.myview.views.simpleViews;
+package com.example.leidong.myview.views.lesson1Views;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RadialGradient;
+import android.graphics.Shader;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -11,15 +13,15 @@ import android.view.View;
 /**
  * Created by Lei Dong on 2019/3/24.
  */
-public class Lines extends View {
+public class Rectangle extends View {
     private Paint mPaint = new Paint();
 
-    public Lines(Context context, @Nullable AttributeSet attrs) {
+    public Rectangle(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
     /**
-     * Drow lines
+     * Drwa a rectangle
      *
      * @param canvas
      */
@@ -27,12 +29,13 @@ public class Lines extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(Color.RED);
-        mPaint.setAntiAlias(true);
-        mPaint.setStrokeWidth(50);
+        Shader shader = new RadialGradient(100, 100, 1000, Color.RED, Color.YELLOW, Shader.TileMode.CLAMP);
+        mPaint.setShader(shader);
 
-        float[] points = {50, 50, 300, 50, 650, 300, 1000, 550};
-        canvas.drawLines(points, mPaint);
+        mPaint.setStrokeWidth(10);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setAntiAlias(true);
+
+        canvas.drawRect(100, 100, 1000, 500, mPaint);
     }
 }

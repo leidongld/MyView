@@ -9,13 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Draw view lesson 1 -->
+        <activity
+            android:name=".ui.Lesson1Activity"
+            android:screenOrientation="portrait" /> <!-- Draw view lesson 2 -->
+        <activity
+            android:name=".ui.Lesson2Activity"
+            android:screenOrientation="portrait" /> <!-- Draw view lesson 3 -->
+        <activity
+            android:name=".ui.Lesson3Activity"
+            android:screenOrientation="portrait" /> <!-- Draw view lesson 4 -->
+        <activity
+            android:name=".ui.Lesson4Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.Lesson6Activity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
